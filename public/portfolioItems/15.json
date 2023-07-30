@@ -1,0 +1,33 @@
+{
+  "id": 15,
+  "type": "work",
+  "name": "Modular Home Insurance UX",
+  "heroImgUrl": "/15/hero.png",
+  "labels": [
+    {
+      "name": "Client-side UX lead"
+    },
+    {
+      "name": "Lab testing"
+    },
+    {
+      "name": "Innovation"
+    }
+  ],
+  "lead": "<p class='lead'>Working as the client-side UX lead with Barclays on a rethinking of how Home Insurance is bought as part of a cross-channel experience.</p><p class='lead'>This was essentially a UX management role where I was responsible for guiding and verifying the UX and UI being produced by a partner developer (Aviva) against Barclays Web Standards.</p><p class='lead'>Additionally I oversaw the usability testing of the application in Barclays' UX labs and consulted on resolution of issues highlighted from testing.</p>",
+  "sections": [
+    {
+      "sections": [
+        {
+          "type": "imageGrid",
+          "heading": "",
+          "images": [
+            "/15/s1i1.png",
+            "/15/s1i2.png",
+            "/15/s1i3.png"
+          ]
+        }
+      ]
+    }
+  ]
+}

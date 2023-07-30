@@ -1,0 +1,67 @@
+{
+  "id": 5,
+  "type": "caseStudy",
+  "name": "Barclays × AutoTrader: Buying a car",
+  "heroImgUrl": "/5/hero.svg",
+  "labels": [
+    {
+      "name": "Customer Journey"
+    },
+    {
+      "name": "Design Concept"
+    },
+    {
+      "name": "Customer Research"
+    }
+  ],
+  "lead": "<p class='lead'>As part of an Open API project the bank wanted to understand how third party developers could put bank APIs to use to improve key customer journeys.</p><p class='lead'>I was asked to investigate how a car buying customer journey could be improved if AutoTrader was to integrate some of these APIs.</p>",
+  "sections": [
+    {
+      "heading": "Research",
+      "sections": [
+        {
+          "type": "imagesAndText",
+          "heading": "Getting out of the office",
+          "images": [
+            "/5/s1i1.png"
+          ],
+          "content": "<p>When I approached this problem I had personally never bought a car. In fact I don’t even have a driving licence.</p><p>This was a conceptual “What if?” kind of project. Additionally I only had 2 days to turn it around. I didn’t have the time or budget required to perform detailed research across a broad range of customers. However, the car buying customer journey was completely alien to me. I needed to develop customer understanding in this domain, fast. I needed to get out of the office and into the field.</p><p>I reached out to my network and was able to recruit at short notice someone who fell roughly in line with one of the businesses primary personas. They had bought a number of cars over the years, from their first banger as a 17 year old to a bus-like people carrier as a 35 year married old father of two.</p><p>I knew that through a semi-structured interview I could gain insight that would allow me to get my teeth into the problem of solving some of their car buying pain points.</p><p>Over an afternoon at a Central London cafe I probed my recruit on their past car buying experience, how personal circumstances during any given purchase influenced their decision making and approach, what about the experience did they enjoy (the test drives!) and what the found painful (finding the money!).</p><p>I learned that a common journey throughout their past purchases included phases of becoming aware of the need to buy a new vehicle, considering the their needs and the options available to them, forming a preference through research and recommendations, then finally funding from multiple sources and making a payment.</p>"
+        }
+      ]
+    },
+    {
+      "heading": "Consideration: “What can I afford?”",
+      "sections": [
+        {
+          "type": "imagesAndText",
+          "heading": "Using a cash/loan mix to narrow a search",
+          "images": [
+            "/5/s2i2.svg"
+          ],
+          "content": "<p>At the consideration phase the customer has a price range in mind. The AutoTrader App allows the customer to set a price range for their search.</p><p>I explored the idea of adding providing functionality that would allow a customer define price range as a cash only amount, a mix of cash and loan, or loan only amount.</p><p>Using a mix of cash and loan a customer would be able to indicate the amount the cash amount they would put up and to add to this an amount that would come from a loan. We would communicate their per-approved limit and allow the customer to use a slider to define loan amount.</p><p>Using a loan only amount the customer would again allow the customer to use a slider to define loan amount. Furthermore we would provide the indicative monthly repayments for their chosen amount.</p><p>In all cases where a loan amount was to be used for funding we would provide further information regarding how this search would impact their credit footprint, a concern uncovered in my customer research.</p>"
+        },
+        {
+          "type": "imagesAndText",
+          "heading": "Showing an indicative monthly cost of funding a purchase",
+          "images": [
+            "/5/s3i1.svg"
+          ],
+          "content": "<p>In the case where a customer had chosen not to include a loan amount as part of their search we would provide messaging alongside within search results that teased an indicative monthly cost of funding purchasing that specific vehicle with a loan.</p><p>We would further message to the customer that if they were to take their pre-approved loan amount into consideration a certain number of additional search results could be shown. Delighting the customer when they realise the could actually afford a newer or higher specification vehicle.</p>"
+        }
+      ]
+    },
+    {
+      "heading": "Funding and purchase: “How can I pay?”",
+      "sections": [
+        {
+          "type": "imagesAndText",
+          "heading": "Combine funding sources into a single pain-free payment",
+          "images": [
+            "/5/s4i1.svg"
+          ],
+          "content": "<p>My customer research indicated that the funding and payment phase the most painful part of the car buying experience.</p><p>Fortunately this phase was where the integration with bank APIs could offer the most impact on the customer journey.<p>Funds would come from multiple sources. Transfers from family members, savings accounts, loans, electronic and cash payments from selling a previous vehicle, etc.</p><p>Moreover my research also indicated uneasiness in making payments to relatively small dealerships or private individuals. Going to meet a stranger with several thousands about your person is not a pleasant experience.</p><p>I explored the idea of creating a secure payment process which would allow the customer to combine funds from multiple bank accounts and a loan into a single payment. Here the customer could make a final decision with regard to how much would be put-up in cash and how much would come from a loan which providing a clear messaging regarding what their monthly repayments would be over the lending term.</p>"
+        }
+      ]
+    }
+  ]
+}

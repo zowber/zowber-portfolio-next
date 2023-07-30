@@ -1,0 +1,37 @@
+{
+  "id": 10,
+  "type": "work",
+  "name": "Share Dealing UI",
+  "heroImgUrl": "/7/hero.svg",
+  "labels": [
+    {
+      "name": "Subject Matter Expertise"
+    },
+    {
+      "name": "Communicating Design"
+    },
+    {
+      "name": "Documentation"
+    }
+  ],
+  "lead": "<p class='lead'>A part of a Design Office team working on a new discretionary investment platform. This example shows annotated UI design for Agent Dealing within the Order Management & Execution work package.</p><p class='lead'>Work involved in reaching this stage included:<ul><li>using existing knowledge of the share dealing business at Barclays,</li><li>review of business and functional requirements,</li><li>development of a relationship with the external agency that created the platform style guide and InDesign documentation framework</li><li>collaborative design and review with the wider project team.</li></ul></p>",
+  "sections": [
+    {
+      "sections": [
+        {
+          "type": "imageGrid",
+          "images": [
+            "/10/s1i1.png",
+            "/10/s1i2.png",
+            "/10/s1i3.png",
+            "/10/s1i4.png",
+            "/10/s1i5.png",
+            "/10/s1i6.png",
+            "/10/s1i7.png",
+            "/10/s1i8.png"
+          ]
+        }
+      ]
+    }
+  ]
+}

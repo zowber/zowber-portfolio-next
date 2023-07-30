@@ -1,0 +1,57 @@
+{
+  "id": 15,
+  "type": "work",
+  "name": "Responsive Travel Insurance UX",
+  "heroImgUrl": "/16/hero.png",
+  "labels": [
+    {
+      "name": "Collaborative Design"
+    },
+    {
+      "name": "Process Design"
+    }
+  ],
+  "lead": "<p class='lead'>A short vision project to seed work on a responsive travel insurance proposition.</p><p class='lead'>Barclays, working with Aviva, were starting a ground-up rethinking of their travel insurance sales UX. To support this I worked with project stakeholders for a few days to help develop a vision of what a good customer journey could look like.</p><p class='lead'>Given the short length of the engagement I chose to go straight into HTML prototyping. First blocking out the necessary content and functional sections of the journey then working through the detail piece-by-piece with the proposition manager and SMEs.</p>",
+  "sections": [
+    {
+      "sections": [
+        {
+          "type": "imageGrid",
+          "heading": "Iteration One: Blocking and content hierarchy",
+          "content": "<p>Referencing the data requirements for the underwriting systems I blocked out a basic journey. Here the goal is to answer the question &#8220;What content or function do I need at this stage in the journey, and of these what is the hierarchy of importance between them?&#8221;</p>",
+          "images": [
+            "/16/s1i1.png",
+            "/16/s1i2.png",
+            "/16/s1i3.png",
+            "/16/s1i4.png",
+            "/16/s1i5.png",
+            "/16/s1i6.png"
+          ]
+        },
+        {
+          "type": "imageGrid",
+          "heading": "Iteration Two: First-fit",
+          "content": "<p>High-level details start to appear here in the second iteration. Most of this detail came from a short meeting where within the team we discussed what detail each section would need and why.</p>",
+          "images": [
+            "/16/s2i1.png",
+            "/16/s2i2.png",
+            "/16/s2i3.png",
+            "/16/s2i4.png",
+            "/16/s2i5.png"
+          ]
+        },
+        {
+          "type": "imageGrid",
+          "heading": "Iteration Three: More detail, interaction, and optimisation",
+          "content": "<p>By the third iteration the prototype journey I had optimised the journey by remove two steps that were in the first iteration, added some interaction that toned-down secondary content, and clarified a lot of the detail regarding content and data requirements. All this with CSS breakpoints for phone, tablet, and desktop displays.</p>",
+          "images": [
+            "/16/s3i1.png",
+            "/16/s3i2.png",
+            "/16/s3i3.png",
+            "/16/s3i4.png"
+          ]
+        }
+      ]
+    }
+  ]
+}
