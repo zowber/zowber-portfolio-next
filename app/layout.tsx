@@ -1,6 +1,9 @@
-import 'bootstrap/scss/bootstrap.scss'
-import 'font-awesome/css/font-awesome.min.css'
-import './globals.css'
+import 'font-awesome/scss/font-awesome.scss'
+import './globals.scss'
+import { Open_Sans, Nunito_Sans } from 'next/font/google'
+
+const open_sans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans', display: 'swap',})
+const nunito = Nunito_Sans({ weight: ['200', '300', '400', '600', '700', '800', '900'], subsets: ['latin'], variable: '--font-nunito-sans', display: 'swap',})
 
 export const metadata = {
   title: 'Zowber Portfolio',
@@ -13,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${open_sans.variable} ${nunito.variable}`}>
       <body>{children}</body>
     </html>
   )
