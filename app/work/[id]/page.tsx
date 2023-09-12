@@ -3,7 +3,7 @@ import { forEachChild } from 'typescript'
 
 async function getData(id: number) {
   const res = await fetch(
-    'http://localhost:3000/portfolioItems/' + id + '.json'
+    'https://zowber-portfolio-data.s3.eu-west-1.amazonaws.com/' + id + '.json'
   )
 
   // Recommendation: handle errors
@@ -17,7 +17,7 @@ async function getData(id: number) {
 
 async function getAllCaseStudies() {
   const res = await fetch(
-    'http://localhost:3000/portfolioItems/portfolioItems.json'
+    'https://zowber-portfolio-data.s3.eu-west-1.amazonaws.com/portfolioItems.json'
   )
 
   // Recommendation: handle errors

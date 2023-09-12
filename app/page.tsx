@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 async function getData() {
   const res = await fetch(
-    'http://localhost:3000/portfolioItems/portfolioItems.json'
+    'https://zowber-portfolio-data.s3.eu-west-1.amazonaws.com/portfolioItems.json'
   )
 
   // Recommendation: handle errors
