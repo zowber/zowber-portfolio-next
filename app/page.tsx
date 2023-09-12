@@ -73,7 +73,7 @@ export default async function Home() {
                   <img
                     className='img-fluid'
                     src={
-                      'http://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                      'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
                       item.heroImgUrl
                     }
                     alt={item.name}

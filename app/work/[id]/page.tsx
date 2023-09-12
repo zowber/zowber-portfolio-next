@@ -87,7 +87,7 @@ export default async function Page({ params }: { params: { id: number } }) {
               <div className='col-5 offset-1'>
                 <img
                   src={
-                    'http://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                    'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
                     item.heroImgUrl
                   }
                   alt={item.name}
@@ -189,7 +189,7 @@ export default async function Page({ params }: { params: { id: number } }) {
                                       className='figure-img img-fluid rounded'
                                       alt=''
                                       src={
-                                        'http://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
                                         image.url
                                       }
                                     />
@@ -249,7 +249,7 @@ export default async function Page({ params }: { params: { id: number } }) {
                                       alt='Example'
                                       className='figure-img img-fluid rounded'
                                       src={
-                                        'http://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
                                         image
                                       }
                                     />
@@ -283,7 +283,7 @@ export default async function Page({ params }: { params: { id: number } }) {
                   <div className='col-md-4'>
                     <img
                       src={
-                        'http://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
                         readNextItems[0].heroImgUrl
                       }
                       className='img-fluid rounded-start'
@@ -311,7 +311,7 @@ export default async function Page({ params }: { params: { id: number } }) {
                   <div className='col-md-4'>
                     <img
                       src={
-                        'http://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
                         readNextItems[1].heroImgUrl
                       }
                       className='img-fluid rounded-start'
