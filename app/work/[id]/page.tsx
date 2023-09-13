@@ -1,5 +1,11 @@
 import Link from 'next/link'
-import { forEachChild } from 'typescript'
+
+export async function generateMetadata({ params }: { params: { id: number } }) {
+  const item = await getData(params.id)
+  return {
+    title: item.name,
+  }
+}
 
 async function getData(id: number) {
   const res = await fetch(process.env.DATA_HOST + '/' + id + '.json')
