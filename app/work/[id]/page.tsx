@@ -2,9 +2,7 @@ import Link from 'next/link'
 import { forEachChild } from 'typescript'
 
 async function getData(id: number) {
-  const res = await fetch(
-    'https://zowber-portfolio-data.s3.eu-west-1.amazonaws.com/' + id + '.json'
-  )
+  const res = await fetch(process.env.DATA_HOST + '/' + id + '.json')
 
   // Recommendation: handle errors
   if (!res.ok) {
@@ -16,9 +14,7 @@ async function getData(id: number) {
 }
 
 async function getAllCaseStudies() {
-  const res = await fetch(
-    'https://zowber-portfolio-data.s3.eu-west-1.amazonaws.com/portfolioItems.json'
-  )
+  const res = await fetch(process.env.DATA_HOST + '/portfolioItems.json')
 
   // Recommendation: handle errors
   if (!res.ok) {
@@ -41,38 +37,38 @@ export default async function Page({ params }: { params: { id: number } }) {
     <>
       <div className='page_portfolio-detail'>
         {/* PORTHEADER */}
-          <nav className='navbar navbar-expand-lg bg-primary navbar-dark'>
-            <div className='container'>
-              <button
-                className='navbar-toggler'
-                type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#navbarNav'
-                aria-controls='navbarNav'
-                aria-expanded='false'
-                aria-label='Toggle navigation'
-              >
-                <span className='navbar-toggler-icon'></span>
-              </button>
-              <div
-                className='collapse navbar-collapse'
-                id='navbarNav'
-              >
-                <ul className='navbar-nav'>
-                  <li className='nav-item'>
-                    <Link
-                      className='nav-link active'
-                      aria-current='page'
-                      href='/'
-                    >
-                      <i className='fa fa-home'></i>
-                      <span className='ms-2'>Back to Home</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+        <nav className='navbar navbar-expand-lg bg-primary navbar-dark'>
+          <div className='container'>
+            <button
+              className='navbar-toggler'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#navbarNav'
+              aria-controls='navbarNav'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
+            >
+              <span className='navbar-toggler-icon'></span>
+            </button>
+            <div
+              className='collapse navbar-collapse'
+              id='navbarNav'
+            >
+              <ul className='navbar-nav'>
+                <li className='nav-item'>
+                  <Link
+                    className='nav-link active'
+                    aria-current='page'
+                    href='/'
+                  >
+                    <i className='fa fa-home'></i>
+                    <span className='ms-2'>Back to Home</span>
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </nav>
+          </div>
+        </nav>
 
         <div className='container-fluid bg-primary text-light'>
           <div className='container'>
@@ -87,7 +83,8 @@ export default async function Page({ params }: { params: { id: number } }) {
               <div className='col-5 offset-1'>
                 <img
                   src={
-                    'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                    process.env.CONTENT_HOST +
+                    '/portfolio-items' +
                     item.heroImgUrl
                   }
                   alt={item.name}
@@ -189,7 +186,8 @@ export default async function Page({ params }: { params: { id: number } }) {
                                       className='figure-img img-fluid rounded'
                                       alt=''
                                       src={
-                                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                                        process.env.CONTENT_HOST +
+                                        '/portfolio-items' +
                                         image.url
                                       }
                                     />
@@ -249,7 +247,8 @@ export default async function Page({ params }: { params: { id: number } }) {
                                       alt='Example'
                                       className='figure-img img-fluid rounded'
                                       src={
-                                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                                        process.env.CONTENT_HOST +
+                                        '/portfolio-items' +
                                         image
                                       }
                                     />
@@ -283,7 +282,8 @@ export default async function Page({ params }: { params: { id: number } }) {
                   <div className='col-md-4'>
                     <img
                       src={
-                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                        process.env.CONTENT_HOST +
+                        '/portfolio-items' +
                         readNextItems[0].heroImgUrl
                       }
                       className='img-fluid rounded-start'
@@ -311,7 +311,8 @@ export default async function Page({ params }: { params: { id: number } }) {
                   <div className='col-md-4'>
                     <img
                       src={
-                        'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                        process.env.CONTENT_HOST +
+                        '/portfolio-items' +
                         readNextItems[1].heroImgUrl
                       }
                       className='img-fluid rounded-start'

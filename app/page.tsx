@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 async function getData() {
   const res = await fetch(
-    'https://zowber-portfolio-data.s3.eu-west-1.amazonaws.com/portfolioItems.json'
+    process.env.DATA_HOST + '/portfolioItems.json'
   )
 
   // Recommendation: handle errors
@@ -73,7 +73,7 @@ export default async function Home() {
                   <img
                     className='img-fluid'
                     src={
-                      'https://zowber-portfolio-assets.s3.amazonaws.com/portfolio-items' +
+                      process.env.CONTENT_HOST + '/portfolio-items' +
                       item.heroImgUrl
                     }
                     alt={item.name}
