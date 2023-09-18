@@ -23,7 +23,7 @@ export default async function Home() {
       <div className='container text-center'>
         <div className='row'>
           <div className='col-12'>
-            <h1 className='display-3 mt-5 mb-4'>Andy Bright</h1>
+            <h1 className='display-3 mt-5 mb-5 pt-5'>Andy Bright</h1>
             <p className='h4 mt-0 mb-5'>
               A Product and UX design lead focused on financial services.
             </p>
@@ -81,7 +81,7 @@ export default async function Home() {
                 </Link>
               </div>
 
-              <div className='col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center text-center'>
+              <div className='col-12 col-sm-6 mt-3 mt-0-sm d-flex flex-column justify-content-center align-items-center text-center'>
                 <h3>
                   <Link
                     href={'/work/' + item.id}

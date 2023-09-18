@@ -225,7 +225,7 @@ export default async function Page({ params }: { params: { id: number } }) {
                         key={index}
                         className='subsection'
                       >
-                        <div className='row imageGrid'>
+                        <div className='row imageGrid mt-4 mb-3'>
                           <div className='col-12'>
                             <div className='row'>
                               <div className='col-12 col-sm-8 offset-sm-2'>
@@ -247,10 +247,10 @@ export default async function Page({ params }: { params: { id: number } }) {
                                 return (
                                   <div
                                     key={index}
-                                    className='col-xs-12 col-lg-6'
+                                    className='col-12 col-sm-8 offset-sm-2'
                                   >
                                     <img
-                                      alt='Example'
+                                      alt=''
                                       className='figure-img img-fluid rounded'
                                       src={
                                         process.env.CONTENT_HOST +
