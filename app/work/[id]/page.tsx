@@ -1,28 +1,16 @@
 import Link from 'next/link'
+import { One } from '../../../data'
 import MoreCaseStudies from '../../MoreCaseStudies'
 
 export async function generateMetadata({ params }: { params: { id: number } }) {
-  const item = await getData(params.id)
+  const item = await One(params.id)
   return {
     title: item.name,
   }
 }
 
-async function getData(id: number) {
-  const res = await fetch(process.env.DATA_HOST + '/' + id + '.json')
-
-  // Recommendation: handle errors
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
-
-  return res.json()
-}
-
-
 export default async function Page({ params }: { params: { id: number } }) {
-  const item = await getData(params.id)
+  const caseStudy = await One(params.id)
 
   return (
       <div className='page_portfolio-detail'>
@@ -64,10 +52,10 @@ export default async function Page({ params }: { params: { id: number } }) {
           <div className='container'>
             <div className='row pt-5 pb-5'>
               <div className='col-6 d-flex flex-column justify-content-center align-items-start'>
-                <h1 className='display-4 mb-3'>{item.name}</h1>
+                <h1 className='display-4 mb-3'>{caseStudy.name}</h1>
                 <div
                   className='pb-5'
-                  dangerouslySetInnerHTML={{ __html: item.lead }}
+                  dangerouslySetInnerHTML={{ __html: caseStudy.lead }}
                 ></div>
               </div>
               <div className='col-5 offset-1'>
@@ -75,34 +63,34 @@ export default async function Page({ params }: { params: { id: number } }) {
                   src={
                     process.env.CONTENT_HOST +
                     '/portfolio-items' +
-                    item.heroImgUrl
+                    caseStudy.heroImgUrl
                   }
-                  alt={item.name}
+                  alt={caseStudy.name}
                   className='img-fluid'
                 />
               </div>
             </div>
           </div>
         </div>
-        {item.meta ? (
+        {caseStudy.meta ? (
           <div className='container-fluid bg-primary-subtle'>
             <div className='container'>
               <div className='row pt-3 pb-1'>
                 <div className='col text-center'>
                   <h6 className='fst-italic'>Company</h6>
-                  <p>{item.meta.client}</p>
+                  <p>{caseStudy.meta.client}</p>
                 </div>
                 <div className='col text-center'>
                   <h6 className='fst-italic'>Role</h6>
-                  <p>{item.meta.role}</p>
+                  <p>{caseStudy.meta.role}</p>
                 </div>
                 <div className='col text-center'>
                   <h6 className='fst-italic'>Duration</h6>
-                  <p>{item.meta.duration}</p>
+                  <p>{caseStudy.meta.duration}</p>
                 </div>
                 <div className='col text-center'>
                   <h6 className='fst-italic'>Location</h6>
-                  <p>{item.meta.location}</p>
+                  <p>{caseStudy.meta.location}</p>
                 </div>
               </div>
             </div>
@@ -112,7 +100,7 @@ export default async function Page({ params }: { params: { id: number } }) {
 
         {/* PORTBODY */}
         <div className='container mt-5'>
-          {item.sections.map((section: any, index: any) => {
+          {caseStudy.sections.map((section: any, index: any) => {
             return (
               <div
                 className='mt-5'
@@ -259,7 +247,7 @@ export default async function Page({ params }: { params: { id: number } }) {
         </div>
         {/* END PORTBODY */}
 
-        <MoreCaseStudies currentCaseStudyId={item.id}/>
+        <MoreCaseStudies currentCaseStudyId={caseStudy.id}/>
 
         {/* FOOTER */}
         <div className='container mt-5'>

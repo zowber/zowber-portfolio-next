@@ -1,59 +1,38 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-async function getData() {
-  const res = await fetch(
-    process.env.DATA_HOST + '/portfolioItems.json'
-  )
-
-  // Recommendation: handle errors
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
-
-  return res.json()
-}
+import { All } from "../data";
 
 export default async function Home() {
-  const data = await getData()
+  const caseStudies = await All()
 
   return (
     <>
       {/* HERO */}
-      <div className='container text-center'>
-        <div className='row'>
-          <div className='col-12'>
-            <h1 className='display-3 mt-5 mb-5 pt-5'>Andy Bright</h1>
-            <p className='h4 mt-0 mb-5'>
+      <div className="container text-center">
+        <div className="row">
+          <div className="col-12">
+            <h1 className="display-3 mt-5 mb-5 pt-5">Andy Bright</h1>
+            <p className="h4 mt-0 mb-5">
               A Product and UX design lead focused on financial services.
             </p>
           </div>
         </div>
 
-        <div className='row mt-0 mb-5 pb-5'>
-          <div className='col-12'>
-            <a
-              href='mailto:andy+portfolio@zowber.com'
-              className='fs-4 me-3'
-            >
-              <i className='fa fa-envelope'></i>
-              <span className='sr-only'>Send an Email</span>
+        <div className="row mt-0 mb-5 pb-5">
+          <div className="col-12">
+            <a href="mailto:andy+portfolio@zowber.com" className="fs-4 me-3">
+              <i className="fa fa-envelope"></i>
+              <span className="sr-only">Send an Email</span>
             </a>
 
-            <a
-              href='https://github.com/zowber/'
-              className='fs-4 me-3'
-            >
-              <i className='fa fa-github'></i>
-              <span className='sr-only'>GitHub Profile</span>
+            <a href="https://github.com/zowber/" className="fs-4 me-3">
+              <i className="fa fa-github"></i>
+              <span className="sr-only">GitHub Profile</span>
             </a>
 
-            <a
-              href='https://uk.linkedin.com/in/zowber'
-              className='fs-4 me-3'
-            >
-              <i className='fa fa-linkedin'></i>
-              <span className='sr-only'>LinkedIn Profile</span>
+            <a href="https://uk.linkedin.com/in/zowber" className="fs-4 me-3">
+              <i className="fa fa-linkedin"></i>
+              <span className="sr-only">LinkedIn Profile</span>
             </a>
           </div>
         </div>
@@ -61,19 +40,17 @@ export default async function Home() {
       {/* END HERO */}
 
       {/* RECENT WORK */}
-      <div className='container'>
-        {data.map((item: any, index: any) => {
+      <div className="container">
+        {caseStudies.map((item: any, index: any) => {
           return (
-            <div
-              className='row mb-5'
-              key={index}
-            >
-              <div className='col-12 col-sm-6'>
-                <Link href={'/work/' + item.id}>
+            <div className="row mb-5" key={index}>
+              <div className="col-12 col-sm-6">
+                <Link href={"/work/" + item.id}>
                   <img
-                    className='img-fluid'
+                    className="img-fluid"
                     src={
-                      process.env.CONTENT_HOST + '/portfolio-items' +
+                      process.env.CONTENT_HOST +
+                      "/portfolio-items" +
                       item.heroImgUrl
                     }
                     alt={item.name}
@@ -81,36 +58,32 @@ export default async function Home() {
                 </Link>
               </div>
 
-              <div className='col-12 col-sm-6 mt-3 mt-0-sm d-flex flex-column justify-content-center align-items-center text-center'>
+              <div className="col-12 col-sm-6 mt-3 mt-0-sm d-flex flex-column justify-content-center align-items-center text-center">
                 <h3>
-                  <Link
-                    href={'/work/' + item.id}
-                  >
-                    {item.name}
-                  </Link>
+                  <Link href={"/work/" + item.id}>{item.name}</Link>
                 </h3>
-                <ul className='labels list-unstyled'>
+                <ul className="labels list-unstyled">
                   {item.labels.map((label: any, index: any) => {
-                    return <li key={index}>{label.name}</li>
+                    return <li key={index}>{label.name}</li>;
                   })}
                 </ul>
 
                 <p>{item.description}</p>
               </div>
             </div>
-          )
+          );
         })}
       </div>
 
       {/* END RECENT WORK */}
 
       {/* FOOTER */}
-      <div className='section'>
-        <div className='footer'>
-          <p className='small'>By Andy Bright.</p>
+      <div className="section">
+        <div className="footer">
+          <p className="small">By Andy Bright.</p>
         </div>
       </div>
       {/* END FOOTER */}
     </>
-  )
+  );
 }
